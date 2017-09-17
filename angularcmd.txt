@@ -1,0 +1,6 @@
+npm install -g @angular/cli // install angular
+ng new angular4 --skip-git // create angular quick setup
+cd angular4
+npm install bootstrap@3 // install bootstrap
+npm install fuelux // install fuelux(predefined tools)
+ng server // node server on 4200
