@@ -12,5 +12,6 @@ public class SpringBootAngularjsLyndaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootAngularjsLyndaApplication.class, args);
+		
 	}
 }
