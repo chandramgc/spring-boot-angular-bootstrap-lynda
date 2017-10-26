@@ -17,8 +17,8 @@ export class AppComponent implements OnInit {
     constructor( private http: Http ) { }
 
     private baseUrl: string = 'http://localhost:9020';
-    private getUrl: string = this.baseUrl + '/room/reservation/v1/';
-    private postUrl: string = this.baseUrl + '/room/reservation/v1';
+    private getUrl: string = this.baseUrl + '/room/resvervation/v1/';
+    private postUrl: string = this.baseUrl + '/room/resvervation/v1';
     public submitted: boolean;
     rooms: Rooms[];
     currentCheckInVal: string;
