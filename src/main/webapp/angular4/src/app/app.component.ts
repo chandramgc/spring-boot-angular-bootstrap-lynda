@@ -57,20 +57,20 @@ export class AppComponent implements OnInit {
     }
 
     getAll(): Observable<Rooms[]> {
-        return this.http.get( this.baseUrl + '/room/resvervation/v1?checkin=2017-05-13&checkout=2017-05-13' )
+        return this.http.get( this.baseUrl + '/room/resvervation/v1?checkin='+ this.currentCheckInVal +'&checkout='+ this.currentCheckOutVal +'' )
             .map( this.mapRoom );
     }
 
-    createReservation( body: Object ) {
+    createReservation( body: ReserveRoomRequest ) {
        
         let bodyString = JSON.stringify( body );
         let headers = new Headers( { 'Content-Type': 'application/json' } );
       
         let options = new RequestOptions( { method: RequestMethod.Post, headers: headers } );
         let requestArg: RequestOptionsArgs = { headers: headers, method: "POST" };
-        console.log(this.postUrl);
+/*        console.log(this.postUrl);
         console.log(body);
-        console.log(options);
+        console.log(options);*/
        
         this.http.post( this.getUrl, body, requestArg )
             .subscribe( res => console.log( res ),
